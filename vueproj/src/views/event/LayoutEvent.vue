@@ -22,14 +22,18 @@
                 
             }
         },
-        created(){
-            EventService.getEvent(this.id)
-            .then(response => {
-                this.event = response.data
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        created() {
+        EventService.getEvent(this.id)
+        .then(response => {
+            this.event = response.data
+        })
+        .catch(error => {
+            if (error.response && error.response.status == 404) {
+              this.$router.push({ name: '404Resource', params: { resource: 'event' } })
+            } else {
+          this.$router.push({ name: 'NetworkError' })
         }
-    }
+      })
+  }
+}
 </script>

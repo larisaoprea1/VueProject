@@ -5,6 +5,9 @@ import EventLayout from '../views/event/LayoutEvent.vue'
 import EventRegister from '../views/event/RegisterNow.vue'
 import EventEdit from '../views/event/EditEvent.vue'
 import AboutView from '../views/AboutView.vue'
+import NotFound from '../views/event/NotFound.vue'
+import NetworkError from '../views/event/NetworkError.vue'
+
 
 const routes = [
   {
@@ -49,6 +52,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: AboutView
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+  },
+  {
+    path: '/network-error',
+    name: 'NetworkError',
+    component: NetworkError
   }
 ]
 
