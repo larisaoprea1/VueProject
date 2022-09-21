@@ -7,7 +7,9 @@ import EventEdit from '../views/event/EditEvent.vue'
 import AboutView from '../views/AboutView.vue'
 import NotFound from '../views/event/NotFound.vue'
 import NetworkError from '../views/event/NetworkError.vue'
-
+import NProgress from 'nprogress'
+import EventService from '@/services/EventService.js'
+import GStore from '@/store'
 
 const routes = [
   {
@@ -19,11 +21,26 @@ const routes = [
   {
     path: '/events/:id',
     name: 'EventLayout',
-    props: true,
-    component: EventLayout,
+    component: EventLayout,  // <-- We removed the props: true.
+    beforeEnter: to => {
+      return EventService.getEvent(to.params.id)
+        .then(response => {
+          GStore.event = response.data // <--- Store the event
+        })
+        .catch(error => {
+          if (error.response && error.response.status == 404) {
+            return {
+              name: '404Resource',
+              params: { resource: 'event' }
+            }
+          } else {
+            return { name: 'NetworkError' }
+          }
+        })
+    },
     children: [
       {
-        path: '',
+      path: '',
       name: 'EventDetails',
       component: EventDetails,
     },
@@ -35,7 +52,8 @@ const routes = [
     {
       path: 'edit',
       name: 'EventEdit',
-      component: EventEdit
+      component: EventEdit,
+      meta: { requireAuth: true }
     },
   ]
   },
@@ -67,7 +85,34 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition){
+    if (savedPosition) {
+      return savedPosition
+    }else{
+      return{ top: 0}
+    }
+  }
 })
 
+router.beforeEach((to, from) => {
+  NProgress.start()
+
+  const notAuthorized = true
+  if(to.meta.requireAuth && notAuthorized){
+    GStore.flashMessage = 'Sorry, you are not authorized to view this page'
+    setTimeout(() =>{
+      GStore.flashMessage = ''
+    }, 3000)
+    if (from.href) { 
+      return false
+    } else {  
+      return { path: '/' }  
+    }
+  }
+})
+
+router.afterEach(()=>{
+  NProgress.done()
+})
 export default router
