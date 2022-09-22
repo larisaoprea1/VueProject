@@ -1,0 +1,124 @@
+{
+  "events": [
+    {
+      "id": 123,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": 456,
+      "category": "food",
+      "title": "Community Gardening",
+      "description": "Join us as we tend to the community edible plants.",
+      "location": "Flora City",
+      "date": "March 14, 2022",
+      "time": "10:00",
+      "organizer": "Fern Pollin"
+    },
+    {
+      "id": 789,
+      "category": "sustainability",
+      "title": "Beach Cleanup",
+      "description": "Help pick up trash along the shore.",
+      "location": "Playa Del Carmen",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "organizer": "Carey Wales"
+    },
+    {
+      "id": "b6f52fc1-a1cb-44c1-bdd4-c1c65e9c0f54",
+      "category": "nature",
+      "title": "weqwd",
+      "description": "wefwe",
+      "location": "wegvwer",
+      "date": "111",
+      "time": "22",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "f77b8d3a-805a-4846-870b-a69527daab85",
+      "category": "housing",
+      "title": "qewdfef",
+      "description": "wefewfgwe",
+      "location": "qwfewf",
+      "date": "ewqfewf",
+      "time": "ewfew",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "89d3cc91-06a9-4dae-8053-986e47ddde31",
+      "category": "nature",
+      "title": "wqdw",
+      "description": "fq",
+      "location": "f",
+      "date": "wqfdq",
+      "time": "qwf",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "4f2d13a4-ade7-42db-ad89-409ccf027853",
+      "category": "nature",
+      "title": "ewdwq",
+      "description": "wefwe",
+      "location": "wefvgr",
+      "date": "ergv",
+      "time": "regvbre",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "0e2d3f41-fcac-4052-86d8-895ff6b45509",
+      "category": "sustainability",
+      "title": "larisaaewfe",
+      "description": "fewffew",
+      "location": "ewrgre",
+      "date": "ewrgrewgre",
+      "time": "rgre",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "f0702c8a-9293-4ca8-ba5f-9e252116ba95",
+      "category": "nature",
+      "title": "wqdfwe",
+      "description": "ewqf",
+      "location": "efew",
+      "date": "ewfew",
+      "time": "wefgew",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "3892e048-207c-419f-b85f-40e8a89c60ad",
+      "category": "sustainability",
+      "title": "adsa",
+      "description": "saf",
+      "location": "af",
+      "date": "af",
+      "time": "af",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "f95a371c-509e-4c61-9daf-c42d50bcd5f8",
+      "category": "sustainability",
+      "title": "ew",
+      "description": "wef",
+      "location": "ewf",
+      "date": "ewf",
+      "time": "ef",
+      "organizer": "Adam Jahr"
+    },
+    {
+      "id": "bccafc94-c992-46d1-b090-0b0f295ffb05",
+      "category": "",
+      "title": "wqd",
+      "description": "wqef",
+      "location": "qwf",
+      "date": "qwfq",
+      "time": "qef",
+      "organizer": "Adam Jahr"
+    }
+  ]
+}
